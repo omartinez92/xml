@@ -1,7 +1,7 @@
-<?PHP 
-public function monitor($xml){
+<?
+function monitor($xml){
 
-    $info_printer = array(
+   /* $info_printer = array(
 	'prodname' => (string)$xml->content->system->product_names->prodname,
 	'prodbrandname' => prodbrandname,
 	'facet_segment' => facet_segment,
@@ -67,7 +67,7 @@ public function monitor($xml){
 	'msgfootnote_13' => (string)$xml->content->features->footnotes->msgfootnote_13,
 	'msgfootnote_14' => (string)$xml->content->features->footnotes->msgfootnote_14,
 	'msgfootnote_15' => (string)$xml->content->features->footnotes->msgfootnote_15,
-	);
+	);*/
 return $info_printer;
 }
 ?>

@@ -38,7 +38,7 @@ $info_cartridge = array(
 	'ksp_04_suppt_03_medium' 	=> (string)$xml->content->features->key_selling_points->ksp_04_suppt_03_medium,
 	'ksp_04_suppt_04_medium' 	=> (string)$xml->content->features->key_selling_points->ksp_04_suppt_04_medium,
 			
-	'prodname'		    => (string)$xml->content->system->product_names->prodname,
+	//'prodname'		    => (string)$xml->content->system->product_names->prodname,
 	'prodnum' 			=> (string)$xml->content->system->product_numbers->prodnum,
 	'dimenmet' 	        => (string)$xml->content->tech_specs->dimensions->dimenmet,
 	'weightmet'			=> (string)$xml->content->tech_specs->weights->weightmet,
@@ -58,7 +58,28 @@ $info_cartridge = array(
 	'msgfootnote_12'    => (string)$xml->content->features->footnotes->msgfootnote_12,
 	'msgfootnote_13'    => (string)$xml->content->features->footnotes->msgfootnote_13,
 	'msgfootnote_14'    => (string)$xml->content->features->footnotes->msgfootnote_14,
-	'msgfootnote_15'    => (string)$xml->content->features->footnotes->msgfootnote_15
+	'msgfootnote_15'    => (string)$xml->content->features->footnotes->msgfootnote_15,
+
+    'tsfootnote_01' => (string) $xml->content->tech_specs->footnotes->tsfootnote_01,
+    'tsfootnote_02' => (string) $xml->content->tech_specs->footnotes->tsfootnote_02,
+    'tsfootnote_03' => (string) $xml->content->tech_specs->footnotes->tsfootnote_03,
+    'tsfootnote_04' => (string) $xml->content->tech_specs->footnotes->tsfootnote_04,
+    'tsfootnote_05' => (string) $xml->content->tech_specs->footnotes->tsfootnote_05,
+    'tsfootnote_06' => (string) $xml->content->tech_specs->footnotes->tsfootnote_06,
+    'tsfootnote_07' => (string) $xml->content->tech_specs->footnotes->tsfootnote_07,
+    'tsfootnote_08' => (string) $xml->content->tech_specs->footnotes->tsfootnote_08,
+    'tsfootnote_09' => (string) $xml->content->tech_specs->footnotes->tsfootnote_09,
+    'tsfootnote_10' => (string) $xml->content->tech_specs->footnotes->tsfootnote_10,
+    'tsfootnote_11' => (string) $xml->content->tech_specs->footnotes->tsfootnote_11,
+    'tsfootnote_12' => (string) $xml->content->tech_specs->footnotes->tsfootnote_12,
+    'tsfootnote_13' => (string) $xml->content->tech_specs->footnotes->tsfootnote_13,
+    'tsfootnote_14' => (string) $xml->content->tech_specs->footnotes->tsfootnote_14,
+    'tsfootnote_15' => (string) $xml->content->tech_specs->footnotes->tsfootnote_15,
+    'tsfootnote_16' => (string) $xml->content->tech_specs->footnotes->tsfootnote_16,
+    'tsfootnote_17' => (string) $xml->content->tech_specs->footnotes->tsfootnote_17,
+    'tsfootnote_18' => (string) $xml->content->tech_specs->footnotes->tsfootnote_18,
+    'tsfootnote_19' => (string) $xml->content->tech_specs->footnotes->tsfootnote_19,
+    'tsfootnote_20' => (string) $xml->content->tech_specs->footnotes->tsfootnote_20
 	);
     return $info_cartridge;
 }
