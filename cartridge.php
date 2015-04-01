@@ -38,7 +38,7 @@ $info_cartridge = array(
 	'ksp_04_suppt_03_medium' 	=> (string)$xml->content->features->key_selling_points->ksp_04_suppt_03_medium,
 	'ksp_04_suppt_04_medium' 	=> (string)$xml->content->features->key_selling_points->ksp_04_suppt_04_medium,
 			
-	//'prodname'		    => (string)$xml->content->system->product_names->prodname,
+	'prodname'		=> (string)$xml->content->system->product_names->prodname,
 	'prodnum' 			=> (string)$xml->content->system->product_numbers->prodnum,
 	'dimenmet' 	        => (string)$xml->content->tech_specs->dimensions->dimenmet,
 	'weightmet'			=> (string)$xml->content->tech_specs->weights->weightmet,

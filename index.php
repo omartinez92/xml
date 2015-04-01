@@ -36,33 +36,33 @@ foreach ($files as $file) {
             file_put_contents('Printer'.(string)date('Y-m-d').'.csv', $file_printer, FILE_APPEND | LOCK_EX);
 
         elseif(strstr($product_name, 'notebook') || strstr($product_name, 'laptop')):
-        	$info = notebook($xml);
+            $info = notebook($xml);
             $info = extract_information($info);
-            $$file_notebook=$info[0]."\n".$info[1]."\n";
+            $file_notebook=$info[0]."\n".$info[1]."\n";
             file_put_contents('Notebook'.(string)date('Y-m-d').'.csv', $file_notebook, FILE_APPEND | LOCK_EX);
 
         elseif (strstr($product_name, "tablet")):
         	$info = tablet($xml);
             $info = extract_information($info);
-            $$file_tablet=$info[0]."\n".$info[1]."\n";
+            $file_tablet=$info[0]."\n".$info[1]."\n";
             file_put_contents('Tablet'.(string)date('Y-m-d').'.csv', $file_tablet, FILE_APPEND | LOCK_EX);
 
         elseif (strstr($product_name, 'monitor')):
         	$info = monitor($xml);
             $info = extract_information($info);
-            $$file_monitor=$info[0]."\n".$info[1]."\n";
+            $file_monitor=$info[0]."\n".$info[1]."\n";
             file_put_contents('Monitor'.(string)date('Y-m-d').'.csv', $file_monitor, FILE_APPEND | LOCK_EX);
 
         elseif (strstr($product_name, 'pc') || strstr($product_name, 'desktop') || strstr($product_name, 'todo-en-uno') || strstr($product_name, 'pavilion') || strstr($product_name, 'stream') || strstr($product_name, 'envy')):
             $info = pc($xml);
             $info = extract_information($info);
-            $$file_pc=$info[0]."\n".$info[1]."\n";
+            $file_pc=$info[0]."\n".$info[1]."\n";
             file_put_contents('PC'.(string)date('Y-m-d').'.csv', $file_pc, FILE_APPEND | LOCK_EX);
 
         else:
-        	$info = accesories($xml);
+            $info = accesories($xml);
             $info = extract_information($info);
-            $$file_accesories=$info[0]."\n".$info[1]."\n";
+            $file_accesories=$info[0]."\n".$info[1]."\n";
             file_put_contents('Accesories'.(string)date('Y-m-d').'.csv', $file_accesories, FILE_APPEND | LOCK_EX);
         endif;
 
@@ -73,8 +73,10 @@ foreach ($files as $file) {
 function extract_information($file){
     $info_label = $info_value= '';
     foreach ($file as $label => $value) {
-               $info_label.=$label.'|';
-               $info_value.= $value.'|';
+                $label = str_replace(',',' ',$label);
+                $value = str_replace(',',' ',$value);
+                $info_label.= $label.',';
+                $info_value.= $value.',';
             }
     $labels_values=[$info_label, $info_value];
     return $labels_values;

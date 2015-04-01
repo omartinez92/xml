@@ -4,8 +4,8 @@ function tablet($xml){
     $info_tablet = array(
         'proddisplayname'   => (string) $xml->content->features->product_names->proddisplayname,
         'prodname'          => (string) $xml->content->system->product_names->prodname,
-        'facet_segment'     => (string) $xml->content->tech_specs->facets->metadata->facet_segment,
-        'facet_formfactor'  => (string)  $xml->content->tech_specs->facets->form_factor->facet_formfactor,
+        'facet_segment'     => (string) $xml->content->facets->metadata->facet_segment,
+        'facet_formfactor'  => (string)  $xml->content->facets->form_factor->facet_formfactor,
 
 
         'osinstalled'           => (string) $xml->content->tech_specs->supported_operating_systems->osinstalled,
